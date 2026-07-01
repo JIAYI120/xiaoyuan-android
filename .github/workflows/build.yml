@@ -18,6 +18,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install Capacitor dependencies
+      run: npm install @capacitor/core @capacitor/cli @capacitor/android
+
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
 
